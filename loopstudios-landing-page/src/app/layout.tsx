@@ -1,9 +1,6 @@
 import "@/styles/reset.css";
 import "@/styles/globals.css";
-import { Alata, Josefin_Sans } from "next/font/google";
-
-const alata = Alata({ subsets: ["latin"], weight: ["400"] });
-export const josefin = Josefin_Sans({ subsets: ["latin"], weight: ["300"] });
+import { alata } from "@/fonts";
 
 export const metadata = {
   title: "Create Next App",
