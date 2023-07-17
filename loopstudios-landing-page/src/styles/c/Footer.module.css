@@ -1,7 +1,9 @@
 .wrapper {
   background: hsl(var(--clr-black));
   color: hsl(var(--clr-white));
-  padding: 3.5rem 2.5rem;
+  padding: 4rem 1.5rem;
+  width: 100%;
+  max-width: 1440px;
 }
 
 .footer {

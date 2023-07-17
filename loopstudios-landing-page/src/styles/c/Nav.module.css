@@ -1,0 +1,37 @@
+.nav {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.2rem;
+  margin-block: 1.5rem 2rem;
+}
+
+.nav_link {
+  font-size: 1rem;
+  position: relative;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+}
+
+@media (min-width: 701px) {
+  .nav {
+    flex-direction: row;
+    margin: 0;
+    align-items: stretch;
+    justify-content: space-between;
+    gap: 2rem;
+    height: clamp(2rem, 100%, 4rem);
+  }
+
+  .nav_link:hover::before {
+    content: "";
+    position: absolute;
+    left: 50%;
+    bottom: -0.5rem;
+    transform: translateX(-50%);
+    height: 0.15rem;
+    width: 1.5rem;
+    background-color: white;
+  }
+}

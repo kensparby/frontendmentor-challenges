@@ -7,7 +7,7 @@ const alata = Alata({
 
 const josefin = Josefin_Sans({
   subsets: ["latin"],
-  weight: ["300"],
+  weight: ["200", "300"],
 });
 
 export { alata, josefin }

@@ -6,10 +6,10 @@ import Socials from "./Socials";
 
 export default function Footer() {
   return (
-    <div className={ styles.wrapper }>
+    <div className={styles.wrapper}>
       <footer className={styles.footer}>
         <Image src={LogoImage} width={150} alt="" />
-        <Nav styles={styles.nav} />
+        <Nav />
         <Socials styles={styles.socials} />
         <span className={`${styles.copyright}`}>
           © 2023 Loopstudios. All rights reserved.

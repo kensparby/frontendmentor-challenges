@@ -1,0 +1,166 @@
+.wrapper {
+  width: 100%;
+  max-width: 1440px;
+  /* overflow: hidden; */
+  background-image: url("/images/mobile/image-hero.jpg");
+  background-size: cover;
+  background-position: top center;
+  height: clamp(500px, 100vh, 700px);
+  height: clamp(500px, 100dvh, 700px);
+  padding: 3rem 1.5rem;
+  color: hsl(var(--clr-white));
+  font-size: 1.5rem;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.innerWrapper {
+  width: 100%;
+  max-width: 1100px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.locked {
+  overflow: hidden;
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  z-index: 10;
+}
+
+.nav_menu_desktop {
+  display: none;
+  align-items: stretch;
+  gap: 3rem;
+  font-size: 1.2rem;
+  font-weight: 1000;
+  height: 100%;
+}
+
+.nav_link {
+  font-size: 1rem;
+  position: relative;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+}
+
+.nav_link:hover::before {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  transform: translateX(-50%);
+  height: 0.15rem;
+  width: 1.5rem;
+  background-color: white;
+}
+
+.logo {
+  max-height: 1.75rem;
+  width: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.burger {
+  cursor: pointer;
+}
+
+.menu_toggle {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  padding: 0;
+}
+
+.line {
+  fill: none;
+  stroke: white;
+  stroke-width: 6;
+  transition: stroke-dasharray 600ms cubic-bezier(0.4, 0, 0.2, 1),
+    stroke-dashoffset 600ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.line1 {
+  stroke-dasharray: 60 207;
+  stroke-width: 6;
+}
+
+.line2 {
+  stroke-dasharray: 60 60;
+  stroke-width: 6;
+}
+
+.line3 {
+  stroke-dasharray: 60 207;
+  stroke-width: 6;
+}
+
+.opened .line1 {
+  stroke-dasharray: 90 207;
+  stroke-dashoffset: -134;
+  stroke-width: 6;
+}
+
+.opened .line2 {
+  stroke-dasharray: 1 60;
+  stroke-dashoffset: -30;
+  stroke-width: 6;
+}
+
+.opened .line3 {
+  stroke-dasharray: 90 207;
+  stroke-dashoffset: -134;
+  stroke-width: 6;
+}
+
+.copy {
+  font-size: 2.6rem;
+  font-weight: 500;
+  padding: .65em .65em .45em;
+  line-height: 1;
+  border: .075em solid currentColor;
+  text-transform: uppercase;
+  margin-block: auto;
+  z-index: -10;
+}
+
+@media screen and (min-width: 700px) {
+  .logo {
+    max-height: 2.5rem;
+  }
+
+  .nav {
+    height: 3rem;
+  }
+
+  .wrapper {
+    background-image: linear-gradient(to bottom, #0006, #0004), url("/images/desktop/image-hero.jpg");
+    padding: 4rem 1.5rem;
+  }
+  
+  .copy {
+    font-size: 5rem;
+    border-width: .05em;
+    padding: .5em .5em .35em;
+    max-width: 15ch;
+  }
+
+  .nav_menu_desktop {
+    display: flex;
+  }
+
+  .menu_toggle {
+    display: none;
+  }
+}

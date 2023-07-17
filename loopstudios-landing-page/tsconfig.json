@@ -21,7 +21,8 @@
     ],
     "paths": {
       "@/*": ["./src/*"],
-      "@/fonts": ["./src/styles/fonts"]
+      "@/fonts": ["./src/styles/fonts"],
+      "@/api": ["./src/app/api"],
     }
   },
   "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts"],

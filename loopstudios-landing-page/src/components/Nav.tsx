@@ -1,24 +1,26 @@
-import styles from '@/styles/c/Nav.module.css';
+import styles from "@/styles/c/Nav.module.css";
 
-const Nav = (props: {styles?: string}) => {
+const Nav = () => {
   return (
-    <ul className={props.styles}>
-      <li>
-        <a>About</a>
-      </li>
-      <li>
-        <a>Careers</a>
-      </li>
-      <li>
-        <a>Events</a>
-      </li>
-      <li>
-        <a>Products</a>
-      </li>
-      <li>
-        <a>Support</a>
-      </li>
-    </ul>
+    <nav>
+      <ul className={styles.nav}>
+        <li className={styles.nav_link}>
+          <a>About</a>
+        </li>
+        <li className={styles.nav_link}>
+          <a>Careers</a>
+        </li>
+        <li className={styles.nav_link}>
+          <a>Events</a>
+        </li>
+        <li className={styles.nav_link}>
+          <a>Products</a>
+        </li>
+        <li className={styles.nav_link}>
+          <a>Support</a>
+        </li>
+      </ul>
+    </nav>
   );
 };
 
