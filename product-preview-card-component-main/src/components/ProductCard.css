@@ -1,0 +1,109 @@
+.ProductCard {
+  border-radius: 0.5rem;
+  overflow: hidden;
+  width: 340px;
+  display: flex;
+  flex-direction: column;
+}
+
+@media screen and (min-width: 768px) {
+  .ProductCard {
+    flex-direction: row;
+    width: unset;
+  }
+}
+
+.productImage {
+  height: 240px;
+  background-image: url("images/image-product-mobile.jpg");
+  background-position: center;
+  background-size: cover;
+}
+
+@media screen and (min-width: 768px) {
+  .productImage {
+    height: unset;
+    flex: 0 0 50%;
+    background-image: url("images/image-product-desktop.jpg");
+  }
+}
+
+.productInfo {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  text-align: left;
+  gap: 0.65rem;
+  padding: 1.75rem;
+  background-color: #fff;
+  max-width: 60ch;
+}
+
+@media screen and (min-width: 768px) {
+  .productInfo {
+    padding: 2rem;
+    gap: 1rem;
+  }
+}
+
+.productInfo__category {
+  text-transform: uppercase;
+  font-size: 0.75rem;
+  font-weight: 400;
+  letter-spacing: 0.4em;
+  color: var(--clr-grey);
+}
+
+.productInfo__productName {
+  font-family: var(--f-serif);
+  font-size: 2.2rem;
+  line-height: 1;
+}
+
+.productInfo__description {
+  line-height: 1.75;
+  font-weight: 400;
+  font-size: 1rem;
+  color: var(--clr-grey);
+  margin-block: 0.5rem;
+  line-height: 1.5;
+}
+
+.productInfo__price {
+  color: var(--clr-primary);
+  font-size: 2rem;
+  font-family: var(--f-serif);
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  margin-block: 0.5rem;
+}
+
+.price__regularPrice {
+  color: initial;
+  text-decoration: line-through;
+  color: var(--clr-grey);
+  font-size: 0.95rem;
+  font-family: initial;
+  font-weight: initial;
+}
+
+.addToCartButton {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5em;
+  background: var(--clr-primary);
+  border-radius: 0.5rem;
+  align-self: stretch;
+  text-align: center;
+  color: #fff;
+  font-weight: bold;
+  text-decoration: none;
+  padding: 0.8rem;
+}
+
+.addToCartButton:hover {
+  background: hsl(158, 36%, 20%);
+}
