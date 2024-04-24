@@ -31,12 +31,9 @@ Users should be able to:
 - [React](https://reactjs.org/) - JS library
 - [Next.js](https://nextjs.org/) - React framework
 
-### What I learned
-
-Use this section to recap over some of your major learnings while working through this project. Writing these out and providing code samples of areas you want to highlight is a great way to reinforce your own knowledge.
-
 ## Author
 
 - Website - [https://sparby.dev/](https://sparby.dev/)
+- LinkedIn - [in/kensparby](https://www.linkedin.com/in/kensparby/)
 - Twitter - [@kensparby](https://www.twitter.com/kensparby)
 - Frontend Mentor - [@kensparby](https://www.frontendmentor.io/profile/kensparby)
