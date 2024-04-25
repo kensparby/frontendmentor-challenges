@@ -28,7 +28,7 @@ Users should be able to:
 ### Links
 
 - Solution URL: [https://github.com/kensparby/frontendmentor-challenges](https://github.com/kensparby/frontendmentor-challenges)
-- Live Site URL: [https://kensparby-loopstudios.vercel.app/](https://kensparby-product-preview.vercel.app/)
+- Live Site URL: [https://ks-product-preview.vercel.app](https://ks-product-preview.vercel.app)
 
 ## My process
 
