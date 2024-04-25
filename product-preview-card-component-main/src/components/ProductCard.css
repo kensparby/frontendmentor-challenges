@@ -102,8 +102,21 @@
   font-weight: bold;
   text-decoration: none;
   padding: 0.8rem;
+  transition: outline-offset 40ms ease-out;
+  outline-offset: 2px;
 }
 
-.addToCartButton:hover {
+.addToCartButton:hover,
+.addToCartButton:focus {
   background: hsl(158, 36%, 20%);
+}
+
+.addToCartButton:focus {
+  outline-offset: 2px;
+  outline: 2px solid hsl(158, 36%, 20%);
+}
+
+.addToCartButton:active {
+  outline-offset: 0;
+  outline-width: 4px;
 }
