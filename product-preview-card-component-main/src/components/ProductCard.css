@@ -15,7 +15,7 @@
 
 .productImage {
   height: 240px;
-  background-image: url("images/image-product-mobile.jpg");
+  background-image: url("/images/image-product-mobile.jpg");
   background-position: center;
   background-size: cover;
 }
@@ -24,7 +24,7 @@
   .productImage {
     height: unset;
     flex: 0 0 50%;
-    background-image: url("images/image-product-desktop.jpg");
+    background-image: url("/images/image-product-desktop.jpg");
   }
 }
 
