@@ -1,27 +1,27 @@
-import { useState } from "react";
+import React from "react";
 import "./Card.scss";
 
-type Timeframe = {
+type TimeCount = {
   current: number;
   previous: number;
 };
 
 type Timeframes = {
-  daily: Timeframe;
-  weekly: Timeframe;
-  monthly: Timeframe;
+  daily: TimeCount;
+  weekly: TimeCount;
+  monthly: TimeCount;
 };
 
 type CardProps = {
   category: string;
+  timeframe: TimeframeKey;
   timeframes: Timeframes;
 };
 
 type TimeframeKey = "daily" | "weekly" | "monthly";
 
-const Card = ({ category, timeframes }: CardProps) => {
-  const [timeframe, setTimeframe] = useState<TimeframeKey>("daily");
-  /* console.log(category, timeframes); */
+const Card = React.memo(({ category, timeframe, timeframes }: CardProps) => {
+  /* const [timeframe, setTimeframe] = useState<TimeframeKey>("daily"); */
 
   return (
     <div className={`Card Card-${category.replace(" ", "")}`}>
@@ -30,6 +30,6 @@ const Card = ({ category, timeframes }: CardProps) => {
       <p className="Card__timeTracked">{timeframes[timeframe].current}</p>
     </div>
   );
-};
+});
 
 export default Card;

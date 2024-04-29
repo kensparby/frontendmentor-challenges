@@ -1,6 +1,6 @@
 import "./User.scss";
 
-type Timeframe = "daily" | "weekly" | "monthly";
+type TimeframeKey = "daily" | "weekly" | "monthly";
 
 type User = {
   name: string;
@@ -9,8 +9,8 @@ type User = {
 
 type UserProps = {
   user: User;
-  timeframe: Timeframe;
-  handleChangeTimeframe: (timeframeKey: Timeframe) => void;
+  timeframe: TimeframeKey;
+  handleChangeTimeframe: (timeframeKey: TimeframeKey) => void;
 };
 
 const User = ({ user, timeframe, handleChangeTimeframe }: UserProps) => {

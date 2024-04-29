@@ -1,14 +1,13 @@
 import Card from "./Card";
 import data from "/src/data/data.json";
 import "./CardContainer.scss";
-import { useState } from "react";
 
 type TimeCount = {
   current: number;
   previous: number;
 };
 
-type Timeframe = "daily" | "weekly" | "monthly";
+type TimeframeKey = "daily" | "weekly" | "monthly";
 
 type Timeframes = {
   daily: TimeCount;
@@ -23,19 +22,18 @@ type Activity = {
 
 type Activities = Activity[];
 
-interface CardContainerProps {
-  timeframe: Timeframe;
-}
+type CardContainerProps = {
+  timeframe: TimeframeKey;
+};
 
-type TimeframeKey = "daily" | "weekly" | "monthly";
-
-const CardContainer: React.FC<CardContainerProps> = () => {
+const CardContainer = ({ timeframe }: CardContainerProps) => {
   /* const [timeframe, setTimeframe] = useState<TimeframeKey>("daily"); */
-  let cards = data.map((activity: Activity, i: number) => {
+  let cards = data.map((activity: Activity) => {
     return (
       <Card
-        key={i}
+        key={activity.title}
         category={activity.title}
+        timeframe={timeframe}
         timeframes={activity.timeframes}
       />
     );

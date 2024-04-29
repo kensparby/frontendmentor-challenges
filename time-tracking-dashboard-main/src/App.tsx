@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useCallback, useState } from "react";
 import "./App.scss";
 
 import User from "./components/User";
@@ -6,7 +6,7 @@ import CardContainer from "./components/CardContainer";
 
 type TimeframeKey = "daily" | "weekly" | "monthly";
 
-// Hardcoded for display purposes, since the data is missing a name.
+// Hardcoded for display purposes, since the supplied data is missing these.
 const user = {
   name: "Jeremy Robson",
   picture: "https://i.pravatar.cc/200?img=68",
@@ -14,9 +14,9 @@ const user = {
 
 function App() {
   const [timeframe, setTimeframe] = useState<TimeframeKey>("daily");
-  const handleChangeTimeframe = (timeframeKey: TimeframeKey) => {
-    setTimeframe(timeframeKey); // TODO
-  };
+  const handleChangeTimeframe = useCallback((timeframeKey: TimeframeKey) => {
+    setTimeframe(timeframeKey);
+  }, []);
 
   return (
     <div className="App">
