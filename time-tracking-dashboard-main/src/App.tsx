@@ -1,5 +1,5 @@
 import { useCallback, useState } from "react";
-import "./App.scss";
+import styles from "./App.module.scss";
 
 import User from "./components/User";
 import CardContainer from "./components/CardContainer";
@@ -19,7 +19,7 @@ function App() {
   }, []);
 
   return (
-    <div className="App">
+    <div className={styles.App}>
       <User
         user={user}
         timeframe={timeframe}

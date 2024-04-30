@@ -1,6 +1,6 @@
 import Card from "./Card";
 import data from "/src/data/data.json";
-import "./CardContainer.scss";
+import styles from "./CardContainer.module.scss";
 
 type TimeCount = {
   current: number;
@@ -38,6 +38,6 @@ const CardContainer = ({ timeframe }: CardContainerProps) => {
       />
     );
   });
-  return <div className="CardContainer">{cards}</div>;
+  return <div className={styles.CardContainer}>{cards}</div>;
 };
 export default CardContainer;

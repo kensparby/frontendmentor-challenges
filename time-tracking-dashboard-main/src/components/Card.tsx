@@ -1,5 +1,5 @@
 import React from "react";
-import "./Card.scss";
+import styles from "./Card.module.scss";
 
 type TimeCount = {
   current: number;
@@ -23,11 +23,18 @@ type TimeframeKey = "daily" | "weekly" | "monthly";
 const Card = React.memo(({ category, timeframe, timeframes }: CardProps) => {
   /* const [timeframe, setTimeframe] = useState<TimeframeKey>("daily"); */
 
+  {
+    /* <div className={`${styles.Card} Card-${category.replace(" ", "")}`}> */
+  }
   return (
-    <div className={`Card Card-${category.replace(" ", "")}`}>
-      <p className="Card__category">{category}</p>
-      <span className="Card__menuBtn"></span>
-      <p className="Card__timeTracked">{timeframes[timeframe].current}</p>
+    <div
+      className={`${styles.Card} ${styles[`Card-${category.replace(" ", "")}`] || ""}`}
+    >
+      <p className={styles.Card__category}>{category}</p>
+      <span className={styles.Card__menuBtn}></span>
+      <p className={styles.Card__timeTracked}>
+        {timeframes[timeframe].current}
+      </p>
     </div>
   );
 });
