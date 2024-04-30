@@ -1,0 +1,152 @@
+.Card {
+  position: relative;
+  background: var(--c-darkblue);
+  border-radius: var(--bradius);
+  padding: 1.25rem;
+  margin-top: 2rem;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  min-width: 350px;
+
+  @media (min-width: 768px) {
+    flex: 1 1 20%;
+    min-width: 200px;
+    &:hover {
+      background: desaturate(
+        lighten($color: hsl(235, 46%, 20%), $amount: 20),
+        5
+      );
+    }
+  }
+
+  &__category,
+  &__menuBtn,
+  &__timeTracked,
+  &__lastTimeframe {
+    flex: 1 1 50%;
+    display: flex;
+    align-items: center;
+  }
+
+  &__timeTracked,
+  &__lastTimeFrame {
+    @media (min-width: 768px) {
+      flex: 0 1 100%;
+    }
+  }
+
+  &__menuBtn,
+  &__lastTimeframe {
+    justify-content: end;
+    color: var(--c-paleblue);
+  }
+
+  &__category {
+    font-weight: 500;
+  }
+
+  &__menuBtn {
+    user-select: none;
+    align-content: space-around;
+
+    & img {
+      cursor: pointer;
+      max-height: 0.25em;
+      box-sizing: content-box;
+      padding: 0.5em 0 0.5em 0.5em;
+
+      @media (min-width: 768px) {
+        &:hover {
+          filter: contrast(100);
+        }
+      }
+    }
+  }
+
+  &__timeTracked {
+    font-size: 1.75rem;
+    font-weight: 300;
+  }
+
+  &__timeTracked {
+    @media (min-width: 768px) {
+      font-size: 3rem;
+      margin-top: 0.75rem;
+    }
+  }
+
+  &__lastTimeframe {
+    font-size: 0.8em;
+  }
+
+  &__lastTimeframe {
+    @media (min-width: 768px) {
+      justify-content: start;
+    }
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    top: -2rem;
+    bottom: 2rem;
+    z-index: -1;
+    border-radius: var(--bradius);
+  }
+
+  &.Card-Work {
+    &::before {
+      background-color: var(--c-work);
+      background-image: url(/images/icon-work.svg);
+      background-repeat: no-repeat;
+      background-position: calc(100% - 1rem) -0.5rem;
+    }
+  }
+
+  &.Card-Play {
+    &::before {
+      background-color: var(--c-play);
+      background-image: url(/images/icon-play.svg);
+      background-repeat: no-repeat;
+      background-position: calc(100% - 1rem) -0.5rem;
+    }
+  }
+
+  &.Card-Study {
+    &::before {
+      background-color: var(--c-study);
+      background-image: url(/images/icon-study.svg);
+      background-repeat: no-repeat;
+      background-position: calc(100% - 1rem) -0.5rem;
+    }
+  }
+
+  &.Card-Exercise {
+    &::before {
+      background-color: var(--c-exercise);
+      background-image: url(/images/icon-exercise.svg);
+      background-repeat: no-repeat;
+      background-position: calc(100% - 1rem) 0;
+    }
+  }
+
+  &.Card-Social {
+    &::before {
+      background-color: var(--c-social);
+      background-image: url(/images/icon-social.svg);
+      background-repeat: no-repeat;
+      background-position: calc(100% - 1rem) -0.5rem;
+    }
+  }
+
+  &.Card-SelfCare {
+    &::before {
+      background-color: var(--c-selfcare);
+      background-image: url(/images/icon-self-care.svg);
+      background-repeat: no-repeat;
+      background-position: calc(100% - 1rem) -0.5rem;
+    }
+  }
+}
