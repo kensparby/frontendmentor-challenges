@@ -1,3 +1,5 @@
+@import "./reset.css";
+
 :root {
   font-family: "Rubik", system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
@@ -42,8 +44,14 @@ body {
 #root {
   max-width: 1280px;
   margin: 0 auto;
-  padding: 2rem;
   display: flex;
+  padding-block: 2rem;
   flex-direction: column;
   align-items: center;
+}
+
+@media (min-width: 440px) {
+  #root {
+    padding: 2rem;
+  }
 }

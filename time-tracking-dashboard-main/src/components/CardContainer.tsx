@@ -1,6 +1,6 @@
 import Card from "./Card";
-import data from "/src/data/data.json";
 import styles from "./CardContainer.module.scss";
+import data from "../data/data.json";
 
 type TimeCount = {
   current: number;
@@ -20,14 +20,11 @@ type Activity = {
   timeframes: Timeframes;
 };
 
-type Activities = Activity[];
-
 type CardContainerProps = {
   timeframe: TimeframeKey;
 };
 
 const CardContainer = ({ timeframe }: CardContainerProps) => {
-  /* const [timeframe, setTimeframe] = useState<TimeframeKey>("daily"); */
   let cards = data.map((activity: Activity) => {
     return (
       <Card
